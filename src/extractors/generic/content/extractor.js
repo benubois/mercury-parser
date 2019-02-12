@@ -80,7 +80,7 @@ const GenericContentExtractor = {
       return null;
     }
 
-    return normalizeSpaces($.html(node));
+    return normalizeSpaces($.html(node, { decodeEntities: false }));
   },
 };
 
