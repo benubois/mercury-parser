@@ -45,9 +45,7 @@ function absolutizeSet($, rootUrl, $content) {
 }
 
 export default function makeLinksAbsolute($content, $, url) {
-  ['href', 'src'].forEach(attr => {
-    absolutize($, url, attr, $content);
-  });
+  ['href', 'src'].forEach(attr => absolutize($, url, attr, $content));
   absolutizeSet($, url, $content);
 
   return $content;
